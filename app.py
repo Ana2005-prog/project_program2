@@ -70,6 +70,7 @@ def calcular():
         sistema.compute()
 
         resultado = round(sistema.output['riesgo_diabetes'], 2)
+        print(f"Glucosa:{glucosa_input},IMC:{imc_calculado},Riesgo:{resultado}")
         print(f"Resultado del riesgo: {resultado}")
         return jsonify({'riesgo_diabetes': resultado})
     except Exception as e:
